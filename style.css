@@ -28,7 +28,8 @@
     background-color: white;
     position: relative;
     left:400px;
-    bottom:500px;/*hole is at bottom(invisible) initially now we pull it up so thatit sits on topof the block*/
+    top: -500px;
+    /* bottom:500px;hole is at bottom(invisible) initially now we pull it up so thatit sits on topof the block */
     animation: block 2s infinite linear; 
 }
 #character{
@@ -36,6 +37,6 @@
     width:20px;
     background-color: red;
     position: absolute;
-    bottom:100px;
+    top:100px;
     border-radius: 50%;
 }
