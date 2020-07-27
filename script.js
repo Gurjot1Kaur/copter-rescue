@@ -16,13 +16,13 @@ hole.addEventListener('animationiteration',()=>{
 setInterval(function(){
     var characterTop = parseInt(window.getComputedStyle(character).getPropertyValue("top"));/*gets the current top position of the character div whichis going to be 100px because that is what we set it to*/
     if(jumping === 0){
-        character.style.top=characterTop+3 + "px";// so the top is pushed down by 3 units every 10 seconds to mimick gravity 
+        character.style.top=characterTop+2 + "px";// so the top is pushed down by 3 units every 10 seconds to mimick gravity 
     }
 
     var blockLeft=parseInt(window.getComputedStyle(block).getPropertyValue("left"));
     var holeTop=parseInt(window.getComputedStyle(hole).getPropertyValue("top"));
     var cTop=-(500-characterTop);// taking charactertop value in negative because holetop is in negative
-    if((characterTop>480)||((blockLeft<20)&&(blockLeft>-50)&&((cTop+20>holeTop+150)||(cTop<holeTop)))){/* ball has hit the bottom or the block is hitting the wall  */
+    if((characterTop>480)||((blockLeft<50)&&(blockLeft>-50)&&((cTop+50>holeTop+150)||(cTop<holeTop)))){/* ball has hit the bottom or the block is hitting the wall  */
         alert("Game Over. Score: "+ counter);
         character.style.top= 100+"px";//so that the character is at bottoon reload
         counter=0;
@@ -35,7 +35,7 @@ function jump(){
     var jumpInterval=setInterval(function(){
         var characterTop = parseInt(window.getComputedStyle(character).getPropertyValue("top"));/*gets the current top position of the character div whichis going to be 100px because that is what we set it to*/
         if(characterTop>6 && jumpCount<15){/*Dont add to the top if characterTop<6 this means dont jump if it is on the border of the screen */
-            character.style.top=characterTop-5 + "px";
+            character.style.top=characterTop-3 + "px";
         }
         
         if(jumpCount>20){
