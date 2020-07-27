@@ -1,0 +1,41 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+#game{
+    height: 500px;
+    width:450px;
+    border: 1px solid black;
+    margin: auto;
+    overflow: hidden;/*so that the block does not go outside the game layout */
+    
+}
+#block{
+    height: 500px;
+    width:50px;
+    background-color: black;
+    position: relative;
+    left:400px;/*so that the block that is in left now has to come from right sopush it400px from left*/
+    animation:block 2s infinite linear; 
+}
+@keyframes block{/*this animation starts with the block on right and ends with it on left*/
+    0%{left: 400px}
+    100%{left: -50px}
+}
+#hole{
+    height: 150px;
+    width:50px;
+    background-color: white;
+    position: relative;
+    left:400px;
+    bottom:500px;/*hole is at bottom(invisible) initially now we pull it up so thatit sits on topof the block*/
+    animation: block 2s infinite linear; 
+}
+#character{
+    height: 20px;
+    width:20px;
+    background-color: red;
+    position: absolute;
+    bottom:100px;
+    border-radius: 50%;
+}
