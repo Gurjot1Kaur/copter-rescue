@@ -24,7 +24,7 @@
     100%{left: -50px}
 }
 #hole{
-    height: 150px;
+    height: 250px;
     width:50px;
     background-color: white;
     position: relative;
@@ -38,5 +38,7 @@
     width:50px;
     position: absolute;
     top:100px;
-    border-radius: 50%;
+    /* border-radius: 50%; */
+    /* background-color: rgb(206, 191, 191); */
+    background-color: rgb(201, 242, 223);
 }
